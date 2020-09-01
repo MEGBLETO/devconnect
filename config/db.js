@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const config = require('config');
 
 
-//collecting the uti from default.jon and storing in a variable
+//collecting the uri from default.jon and storing in a variable
 const db = config.get('mongoURI');
 
 
@@ -11,7 +11,8 @@ const db = config.get('mongoURI');
 const connectDB = async () => {
   try{
               await mongoose.connect(db ,{
-
+              useCreateIndex: true,
+              useUnifiedTopology: true,
               useNewUrlParser :true
               });
 
@@ -19,7 +20,7 @@ const connectDB = async () => {
   }  catch(err){
                  
     console.error(err.message);
-//exit my process with a failure
+//exit my process in case of a failure
     process.exit(1);
   }
 };

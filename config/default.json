@@ -1,4 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://carnel123:carnel123@myclust-e7msm.mongodb.net/<dbname>?retryWrites=true&w=majority"
-
+  "mongoURI": "mongodb+srv://carnel123:carnel123@myclust-e7msm.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jwtSecret" : "mysecrettoken"
 }
