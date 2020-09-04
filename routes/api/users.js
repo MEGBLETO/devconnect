@@ -141,6 +141,7 @@ async(req, res) => {
         d:'mm'
       })
 
+      //creating the user
       user = new User({
         name,
         email,
@@ -176,6 +177,7 @@ await user.save();
     } catch(err){
 
       console.log(error.message);
+
 
       res.status(500).send('Server error');
 

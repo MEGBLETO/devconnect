@@ -33,7 +33,7 @@ const profileSchema = new mongoose.Schema({
     
   },
 
-  githubusernme:{
+  githubusername:{
     type: String
   },
 
